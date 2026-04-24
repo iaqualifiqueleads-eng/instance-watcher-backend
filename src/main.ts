@@ -17,7 +17,7 @@ async function bootstrap() {
 
   app.enableCors({
     allowedHeaders: ['Content-Type', 'Origin', 'Authorization', 'Referer'],
-    origin: ['*'],
+    origin: ['*', 'http://localhost:8080/', "https://instance-watcher.vercel.app/"],
     credentials: false,
   });
 
