@@ -11,4 +11,9 @@ export class LastStatusInstanceController {
   async teste() {
     return this.lastStatusInstanceService.handleSyncLastInstance()
   }
+
+  @Get('get-all-instances')
+  async getAllInstances() {
+    return this.lastStatusInstanceService.getAllInstances()
+  }
 }

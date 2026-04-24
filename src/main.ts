@@ -16,11 +16,18 @@ async function bootstrap() {
   );
 
   app.enableCors({
+    origin: [
+      'http://localhost:8080',
+      'https://instance-watcher.vercel.app'
+    ],
     allowedHeaders: ['Content-Type', 'Origin', 'Authorization', 'Referer'],
-    origin: ['*', 'http://localhost:8080/', "https://instance-watcher.vercel.app/"],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: false,
   });
 
+  app.enableCors({
+    origin: true,
+  })
 
   const config = new DocumentBuilder()
     .setTitle('API Instances Watcher')

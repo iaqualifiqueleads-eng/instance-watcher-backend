@@ -40,6 +40,7 @@ export class LastStatusInstanceService {
               status: resp_instancia.status,
               system: obj.sistema,
               work_space: String(resp_instancia.workspace_id),
+              color: obj.color
             },
             update: {
               id: resp_instancia.id,
@@ -71,5 +72,13 @@ export class LastStatusInstanceService {
         }
       }
     }
+  }
+
+  async getAllInstances() {
+    return await this.prisma.lastStatusInstance.findMany({
+      orderBy: {
+        system: "asc"
+      }
+    });
   }
 }
