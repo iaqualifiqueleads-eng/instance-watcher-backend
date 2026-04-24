@@ -20,7 +20,7 @@ async function bootstrap() {
       'http://localhost:8080',
       'https://instance-watcher.vercel.app'
     ],
-    allowedHeaders: ['Content-Type', 'Origin', 'Authorization', 'Referer'],
+    allowedHeaders: ['Content-Type', 'Origin', 'Authorization', 'Referer', 'Access-Control-Allow-Origin'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: false,
   });
