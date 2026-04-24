@@ -7,26 +7,14 @@ datasource db {
   provider = "mysql"
 }
 
-model Instance {
-  id           Int     @id @default(autoincrement())
+model LastStatusInstance {
+  id Int @id
 
-  instance_id  String
   name         String
   phone_number String
   work_space   String
   status       String
   system       String  @default("SYSTEM")
   color        String  @default("#D705F7")
-  celular      String?
-
-  @@unique([instance_id])
-}
-
-model LastStatusInstance {
-  id Int @id @default(autoincrement())
-
-  instance_id  String
-  name         String
-  phone_number String
-  status       String
+  celular      String  @default("---")
 }

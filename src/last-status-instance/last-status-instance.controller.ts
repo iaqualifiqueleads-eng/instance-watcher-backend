@@ -5,10 +5,10 @@ import { UpdateLastStatusInstanceDto } from './dto/update-last-status-instance.d
 
 @Controller('last-status-instance')
 export class LastStatusInstanceController {
-  constructor(private readonly lastStatusInstanceService: LastStatusInstanceService) {}
+  constructor(private readonly lastStatusInstanceService: LastStatusInstanceService) { }
 
   @Get()
-  findAll() {
-    return this.lastStatusInstanceService.findAll();
+  async teste() {
+    return this.lastStatusInstanceService.handleSyncLastInstance()
   }
 }
