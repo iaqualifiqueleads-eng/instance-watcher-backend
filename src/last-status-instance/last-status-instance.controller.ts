@@ -8,7 +8,7 @@ export class LastStatusInstanceController {
   constructor(private readonly lastStatusInstanceService: LastStatusInstanceService) { }
 
   @Get()
-  async teste() {
+  async handleSyncLastInstance() {
     return this.lastStatusInstanceService.handleSyncLastInstance()
   }
 

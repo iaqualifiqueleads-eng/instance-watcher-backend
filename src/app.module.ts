@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { HttpModule } from '@nestjs/axios';
 import { InstanceModule } from './instance/instance.module';
 import { LastStatusInstanceModule } from './last-status-instance/last-status-instance.module';
+import { NotificarModule } from './notificar/notificar.module';
 
 @Module({
-  imports: [HttpModule, InstanceModule, LastStatusInstanceModule],
+  imports: [HttpModule, InstanceModule, LastStatusInstanceModule, NotificarModule],
   controllers: [AppController],
   providers: [AppService],
 })

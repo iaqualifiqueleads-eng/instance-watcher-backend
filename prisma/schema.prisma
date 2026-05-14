@@ -14,7 +14,14 @@ model LastStatusInstance {
   phone_number String
   work_space   String
   status       String
-  system       String  @default("SYSTEM")
-  color        String  @default("#D705F7")
-  celular      String  @default("---")
+  system       String @default("SYSTEM")
+  color        String @default("#D705F7")
+  celular      String @default("---")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+
+  nome     String
+  whatsapp String
 }
