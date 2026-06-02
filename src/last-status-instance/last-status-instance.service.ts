@@ -23,6 +23,8 @@ export class LastStatusInstanceService {
     for (const obj of SYSTEMS) {
       const response = await this.instance.getInstances(obj)
 
+      console.log('[] => ', response?.data.instances.length);
+
       if (response?.status === 200) {
         for (const resp_instancia of response.data.instances) {
           const instancia_db = await this.prisma.lastStatusInstance.findFirst({ where: { id: resp_instancia.id } })
