@@ -41,7 +41,7 @@ export const SYSTEMS = [
     },
     {
       "base_url": "https://ra-bcknd.com/api/zapi/instances",
-      "authorization": "Bearer 308207|Z7gWuH0dZJunGmtCprKkioBi0BVDWm07vmEfh6451c1203a6",
+      "authorization": "Bearer 324529|1ZRVrxb0YqwIhGH8D7nATrDQ9JOdQJf8EIFh4meW9697b1c3",
       "origin": "https://benibia.chatbotsystem.ai",
       "referer": "https://benibia.chatbotsystem.ai/",
       "sistema": "Benibia",
@@ -49,7 +49,7 @@ export const SYSTEMS = [
     },
     {
       "base_url": "https://ra-bcknd.com/api/zapi/instances",
-      "authorization": "Bearer 295344|4gpIq7foTlwFHUEAZMDOCWkPUBOd4q8dgil35zWM507dbba0",
+      "authorization": "Bearer 333729|ARO8HT6vX8yDwvZLTprsyRWmf7e4PZYy5gvWMVkEd2639117",
       "origin": "https://pocardevender.chatbotsystem.ai",
       "referer": "https://pocardevender.chatbotsystem.ai/",
       "sistema": "Pocar de Vender",
@@ -57,7 +57,7 @@ export const SYSTEMS = [
     },
     {
       "base_url": "https://ra-bcknd.com/api/zapi/instances",
-      "authorization": "Bearer 305943|LtwRXDwY3EVlxB9nsyOhdsEbUHKL3Ri6AIKHx1mW4b514b3f",
+      "authorization": "Bearer 324550|LtDmLPy3O1JnLJQBseYGcJiDdyGox844617inOxd3bf49855",
       "origin": "https://ebike.chatbotsystem.ai",
       "referer": "https://ebike.chatbotsystem.ai/",
       "sistema": "E-bike",
@@ -65,7 +65,7 @@ export const SYSTEMS = [
     },
     {
       "base_url": "https://ra-bcknd.com/api/zapi/instances",
-      "authorization": "Bearer 305951|qx8ei9z04OhLIKfw0wE8NWuuVMF2BWRkFhs56pSW9c69c8cd",
+      "authorization": "Bearer 324582|0AnfMOMcUfq5z1ym0g5Pecg00U9cT1Dygvr67mC3ef2d22c9",
       "origin": "https://youseseguros.chatbotsystem.ai",
       "referer": "https://youseseguros.chatbotsystem.ai/",
       "sistema": "Youzer",
