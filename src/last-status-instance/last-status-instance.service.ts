@@ -21,6 +21,8 @@ export class LastStatusInstanceService {
   async handleSyncLastInstance() {
 
     for (const obj of SYSTEMS) {
+      console.log('[] => ', obj.sistema);
+      
       const response = await this.instance.getInstances(obj)
 
       console.log('[] => ', response?.data.instances.length);
