@@ -25,10 +25,6 @@ async function bootstrap() {
     credentials: false,
   });
 
-  app.enableCors({
-    origin: true,
-  })
-
   const config = new DocumentBuilder()
     .setTitle('API Instances Watcher')
     .setDescription('')
