@@ -9,11 +9,19 @@ export class LastStatusInstanceController {
 
   @Get()
   async handleSyncLastInstance() {
-    return this.lastStatusInstanceService.handleSyncLastInstance()
+    const x = await this.lastStatusInstanceService.handleSyncLastInstance()
+    
+    console.log('[handleSyncLastInstance] => ', x);
+    
+    return x
   }
 
   @Get('get-all-instances')
   async getAllInstances() {
-    return this.lastStatusInstanceService.getAllInstances()
+    const x = await this.lastStatusInstanceService.getAllInstances()
+  
+    console.log('[getAllInstances] => ', x);
+
+    return x
   }
 }
