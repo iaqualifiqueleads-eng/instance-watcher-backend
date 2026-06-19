@@ -17,7 +17,7 @@ export const SYSTEMS = [
     },
     {
       "base_url": "https://ra-bcknd.com/api/zapi/instances",
-      "authorization": "Bearer 306639|4eH1X4wWyVxYyiAbJPLY8uQQpTUKZupMc38bV3So95bd4215",
+      "authorization": "Bearer 345497|cN932xttEc5VRJecVYaNGPAru1aXPP77ObTt91uC66f1ccdf",
       "origin": "https://iaqualifiqueleads.chatbotsystem.ai",
       "referer": "https://iaqualifiqueleads.chatbotsystem.ai/",
       "sistema": "Melhor Amigo",
@@ -25,18 +25,10 @@ export const SYSTEMS = [
     },
     {
       "base_url": "https://ra-bcknd.com/api/zapi/instances",
-      "authorization": "Bearer 306643|NCwmJiPrvVA3L5aaFWxFL3rGvi06srnxPYxJD2650f0eed00",
-      "origin": "https://drmatheus.chatbotsystem.ai",
-      "referer": "https://drmatheus.chatbotsystem.ai/",
-      "sistema": "Dr Klaus",
-      "color": "#17BECF"
-    },
-    {
-      "base_url": "https://ra-bcknd.com/api/zapi/instances",
       "authorization": "Bearer 306644|5YOhZzHLbD9dl473IBems9HXyiYnZExMuiAJCnDUd24fd25d",
       "origin": "https://v2u8ct.chatbotsystem.ai",
       "referer": "https://v2u8ct.chatbotsystem.ai/",
-      "sistema": "Qualifique Leads",
+      "sistema": "Cantinho",
       "color": "#9467BD"
     },
     {
@@ -52,7 +44,7 @@ export const SYSTEMS = [
       "authorization": "Bearer 333729|ARO8HT6vX8yDwvZLTprsyRWmf7e4PZYy5gvWMVkEd2639117",
       "origin": "https://pocardevender.chatbotsystem.ai",
       "referer": "https://pocardevender.chatbotsystem.ai/",
-      "sistema": "Pocar de Vender",
+      "sistema": "Celisa",
       "color": "#E377C2"
     },
     {

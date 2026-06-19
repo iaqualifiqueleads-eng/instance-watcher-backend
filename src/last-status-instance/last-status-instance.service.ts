@@ -21,11 +21,11 @@ export class LastStatusInstanceService {
   async handleSyncLastInstance() {
 
     for (const obj of SYSTEMS) {
-      console.log('[] => ', obj.sistema);
+      
       
       const response = await this.instance.getInstances(obj)
 
-      console.log('[] => ', response?.data.instances.length);
+      
 
       if (!response) {
         this.logger.warn(`[handleSyncLastInstance] Sistema "${obj.sistema}" ignorado — falha na requisição (verifique o token Bearer no systems.config.ts)`);
