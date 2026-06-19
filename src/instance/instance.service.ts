@@ -33,7 +33,9 @@ export class InstanceService {
       }
 
     } catch (error) {
-      console.error(error.stack)
+      const status = error?.response?.status;
+      const message = error?.response?.data?.message ?? error?.message;
+      console.error(`[getInstances] ERRO ao buscar instâncias de "${obj.sistema}" — HTTP ${status ?? 'N/A'}: ${message}`);
 
       return undefined
     }

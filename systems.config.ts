@@ -57,14 +57,6 @@ export const SYSTEMS = [
     },
     {
       "base_url": "https://ra-bcknd.com/api/zapi/instances",
-      "authorization": "Bearer 324550|LtDmLPy3O1JnLJQBseYGcJiDdyGox844617inOxd3bf49855",
-      "origin": "https://ebike.chatbotsystem.ai",
-      "referer": "https://ebike.chatbotsystem.ai/",
-      "sistema": "E-bike",
-      "color": "#F72585"
-    },
-    {
-      "base_url": "https://ra-bcknd.com/api/zapi/instances",
       "authorization": "Bearer 324582|0AnfMOMcUfq5z1ym0g5Pecg00U9cT1Dygvr67mC3ef2d22c9",
       "origin": "https://youseseguros.chatbotsystem.ai",
       "referer": "https://youseseguros.chatbotsystem.ai/",

@@ -27,6 +27,11 @@ export class LastStatusInstanceService {
 
       console.log('[] => ', response?.data.instances.length);
 
+      if (!response) {
+        this.logger.warn(`[handleSyncLastInstance] Sistema "${obj.sistema}" ignorado — falha na requisição (verifique o token Bearer no systems.config.ts)`);
+        continue;
+      }
+
       if (response?.status === 200) {
         for (const resp_instancia of response.data.instances) {
           const instancia_db = await this.prisma.lastStatusInstance.findFirst({ where: { id: resp_instancia.id } })
