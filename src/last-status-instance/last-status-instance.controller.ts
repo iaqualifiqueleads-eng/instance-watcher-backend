@@ -11,7 +11,7 @@ export class LastStatusInstanceController {
   async handleSyncLastInstance() {
     const x = await this.lastStatusInstanceService.handleSyncLastInstance()
     
-    console.log('[handleSyncLastInstance] => ', x);
+    console.log('[handleSyncLastInstance] => ');
     
     return x
   }
@@ -20,7 +20,7 @@ export class LastStatusInstanceController {
   async getAllInstances() {
     const x = await this.lastStatusInstanceService.getAllInstances()
   
-    console.log('[getAllInstances] => ', x);
+    console.log('[getAllInstances] => ');
 
     return x
   }
