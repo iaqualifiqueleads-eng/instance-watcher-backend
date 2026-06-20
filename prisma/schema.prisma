@@ -19,6 +19,15 @@ model LastStatusInstance {
   celular      String @default("---")
 }
 
+model System {
+  id            Int    @id @default(autoincrement())
+  authorization String
+  origin        String
+  referer       String
+  sistema       String
+  color         String
+}
+
 model User {
   id Int @id @default(autoincrement())
 
