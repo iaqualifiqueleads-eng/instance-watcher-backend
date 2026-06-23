@@ -10,16 +10,15 @@ export class NotificarService {
 
   private readonly logger = new Logger(NotificarService.name);
 
-  async notificarAdmInstanciaDesconectada({ user, instancia, agente }: { user: User, instancia: LastStatusInstance, agente: LastStatusInstance }) {
+  async notificarAdmInstanciaDesconectada({ user, instancia }: { user: User, instancia: LastStatusInstance }) {
     this.logger.warn(`Fail instance System ${instancia.status} Name ${instancia.name} User ${user.nome} User Whats ${user.whatsapp}`)
     await firstValueFrom(
       this.httpService.post(
-        "https://ra-bcknd.com/v1/api-trigger/84ggft8lrc6uydqy8gl9",
+        "https://ra-bcknd.com/v1/api-trigger/vdpgr7sb66lp3sbh6wd6",
         {
           nome: `${user.nome}`,
           whatsapp: `${user.whatsapp}`,
-          message_fail_instance: `🚨❌ \nCHIP ${instancia.name} \nNUMERO ${instancia.phone_number} \nSISTEMA ${instancia.system}`,
-          para_agente: agente.name
+          mensagem: `🚨❌ \nCHIP ${instancia.name} \nNUMERO ${instancia.phone_number} \nSISTEMA ${instancia.system}`,
         }
       )
     )

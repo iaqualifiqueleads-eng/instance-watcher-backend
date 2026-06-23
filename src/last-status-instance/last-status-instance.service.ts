@@ -19,7 +19,7 @@ export class LastStatusInstanceService {
   async handleSyncLastInstance() {
     const systems = await this.prisma.system.findMany();
 
-    for (const system of systems) {
+    for await (const system of systems) {
       console.log('[] => ', system.sistema);
 
       const response = await this.instance.getInstances(system)
@@ -69,14 +69,9 @@ export class LastStatusInstanceService {
 
   async handleNotification(instancia_db: LastStatusInstance) {
     const users = await this.prisma.user.findMany();
-    const agente = await this.prisma.lastStatusInstance.findFirst({ where: { status: "CONNECTED", work_space: "6936" } })
 
-    if (!agente || !users || !instancia_db) {
-      return
-    }
-
-    for (const user of users) {
-      await this.notificar.notificarAdmInstanciaDesconectada({ user, instancia: instancia_db, agente })
+    for await (const user of users) {
+      await this.notificar.notificarAdmInstanciaDesconectada({ user, instancia: instancia_db })
     }
   }
 

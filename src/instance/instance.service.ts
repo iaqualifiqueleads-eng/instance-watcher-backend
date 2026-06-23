@@ -49,7 +49,7 @@ export class InstanceService {
     const systems = await this.prisma.system.findMany();
     const results: Array<Instance> = []
 
-    for (const system of systems) {
+    for await (const system of systems) {
       const response = await this.getInstances(system)
 
       if (response) {
