@@ -18,7 +18,7 @@ export class NotificarService {
         {
           nome: `${user.nome}`,
           whatsapp: `${user.whatsapp}`,
-          mensagem: `🚨❌ \nCHIP ${instancia.name} \nNUMERO ${instancia.phone_number} \nSISTEMA ${instancia.system}`,
+          mensagem: `🚨❌ CHIP: ${instancia.name} NUMERO: ${instancia.phone_number} SISTEMA: ${instancia.system}`,
         }
       )
     )

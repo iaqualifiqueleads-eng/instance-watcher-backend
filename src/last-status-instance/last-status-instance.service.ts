@@ -17,14 +17,12 @@ export class LastStatusInstanceService {
 
   @Cron(CronExpression.EVERY_5_MINUTES)
   async handleSyncLastInstance() {
+    this.logger.debug("[LastStatusInstanceService] [handleSyncLastInstance]")
+    
     const systems = await this.prisma.system.findMany();
 
     for await (const system of systems) {
-      console.log('[] => ', system.sistema);
-
       const response = await this.instance.getInstances(system)
-
-      console.log('[] => ', response?.data.instances.length);
 
       if (!response) {
         this.logger.warn(`[handleSyncLastInstance] Sistema "${system.sistema}" ignorado — falha na requisição (verifique o token Bearer no banco de dados)`);
