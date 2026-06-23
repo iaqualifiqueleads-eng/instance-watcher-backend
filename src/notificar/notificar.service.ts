@@ -10,7 +10,7 @@ export class NotificarService {
 
   private readonly logger = new Logger(NotificarService.name);
 
-  async notificarAdmInstanciaDesconectada({ user, instancia }: { user: User, instancia: LastStatusInstance }) {
+  async notificarAdmInstanciaDesconectada({ user, instancia, para_agente }: { user: User, instancia: LastStatusInstance, para_agente: string }) {
     this.logger.warn(`Fail instance System ${instancia.status} Name ${instancia.name} User ${user.nome} User Whats ${user.whatsapp}`)
     await firstValueFrom(
       this.httpService.post(
@@ -18,7 +18,8 @@ export class NotificarService {
         {
           nome: `${user.nome}`,
           whatsapp: `${user.whatsapp}`,
-          mensagem: `🚨❌ CHIP: ${instancia.name} NUMERO: ${instancia.phone_number} SISTEMA: ${instancia.system}`,
+          mensagem: `🚨❌ \nSISTEMA: ${instancia.system} \nCHIP: ${instancia.name} \nNUMERO: ${instancia.phone_number}`,
+          para_agente: para_agente
         }
       )
     )

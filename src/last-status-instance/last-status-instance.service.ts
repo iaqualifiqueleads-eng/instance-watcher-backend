@@ -18,7 +18,7 @@ export class LastStatusInstanceService {
   @Cron(CronExpression.EVERY_5_MINUTES)
   async handleSyncLastInstance() {
     this.logger.debug("[LastStatusInstanceService] [handleSyncLastInstance]")
-    
+
     const systems = await this.prisma.system.findMany();
 
     for await (const system of systems) {
@@ -68,8 +68,19 @@ export class LastStatusInstanceService {
   async handleNotification(instancia_db: LastStatusInstance) {
     const users = await this.prisma.user.findMany();
 
-    for await (const user of users) {
-      await this.notificar.notificarAdmInstanciaDesconectada({ user, instancia: instancia_db })
+    const system_cantinho = await this.prisma.system.findFirst({ where: { sistema: "Cantinho" } })
+
+
+    if (system_cantinho) {
+      const response = await this.instance.getInstances(system_cantinho);
+
+      const instancias_conectadas = response?.data.instances.filter((e) => e.status === "CONNECTED")
+
+      if (instancias_conectadas && instancias_conectadas.length >= 1) {
+        for await (const user of users) {
+          await this.notificar.notificarAdmInstanciaDesconectada({ user, instancia: instancia_db, para_agente: instancias_conectadas[0].name })
+        }
+      }
     }
   }
 
