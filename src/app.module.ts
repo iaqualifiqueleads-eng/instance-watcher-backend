@@ -2,12 +2,13 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HttpModule } from '@nestjs/axios';
+import { ScheduleModule } from '@nestjs/schedule';
 import { InstanceModule } from './instance/instance.module';
 import { LastStatusInstanceModule } from './last-status-instance/last-status-instance.module';
 import { NotificarModule } from './notificar/notificar.module';
 
 @Module({
-  imports: [HttpModule, InstanceModule, LastStatusInstanceModule, NotificarModule],
+  imports: [HttpModule, ScheduleModule.forRoot(), InstanceModule, LastStatusInstanceModule, NotificarModule],
   controllers: [AppController],
   providers: [AppService],
 })
