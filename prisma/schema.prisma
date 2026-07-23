@@ -26,6 +26,8 @@ model System {
   referer       String
   sistema       String
   color         String
+  email         String @default("")
+  senha         String @default("")
 }
 
 model User {
