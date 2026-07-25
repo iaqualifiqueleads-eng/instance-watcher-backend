@@ -35,6 +35,8 @@ export class InstanceService {
   }
 
   private async login(system: System): Promise<string> {
+
+    console.log(`[login] Tentando login no sistema "${system.sistema}"`);
     const response = await firstValueFrom(
       this.httpService.post<LoginResponse>(
         LOGIN_URL,
@@ -76,7 +78,7 @@ export class InstanceService {
     } catch (error) {
       const status = error?.response?.status;
 
-      if (status === 401) {
+      if (status === 400 || status === 401) {
         try {
           const authorization = await this.login(system)
           const response = await this.requestInstances(system, authorization)
